@@ -19,3 +19,11 @@
 .celebration-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none;border-radius:inherit}.celebration-particles i{position:absolute;left:var(--x);top:-15px;width:7px;height:14px;background:var(--color);opacity:0;animation:celebrate-fall 2.4s var(--delay) ease-out both}
 @keyframes celebrate-fall{0%{opacity:0;transform:translateY(0) rotate(0)}15%{opacity:1}100%{opacity:0;transform:translateY(460px) rotate(var(--turn))}}
 @media(prefers-reduced-motion:reduce){.celebration-particles{display:none}}
+/* Two course pages share a navigation and retain independent progress. */
+.course-tabs{position:sticky;top:0;z-index:5;display:flex;gap:8px;padding:14px 0;background:#090e1bf5;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.course-tabs a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 22px;border-radius:10px;color:var(--muted);text-decoration:none;font-weight:700;border:1px solid transparent}
+.course-tabs a[aria-current="page"]{background:#163749;color:#b3fff0;border-color:#3c6a7b}.course-tabs a:hover{color:#fff;background:#162b3e}
+article{scroll-margin-top:90px}.lesson-group{color:var(--cyan);font-size:13px;font-weight:700;margin:20px 0 9px}.lesson-group:first-child{margin-top:0}
+.journal-handoff{padding:18px 22px;background:#142a34;border:1px solid #315362;border-radius:12px;margin-bottom:20px}.journal-handoff strong{color:#dcfaf5}.journal-handoff p{margin:5px 0 0;color:var(--muted)}
+.tool-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:24px 0}.tool-directory a{display:flex;flex-direction:column;gap:6px;padding:18px;background:#142737;border:1px solid #365268;border-radius:12px;text-decoration:none;color:var(--ink)}.tool-directory a:hover{border-color:var(--cyan);background:#19394a}.tool-directory strong{display:flex;justify-content:space-between;font-size:18px}.tool-directory a>span{color:var(--muted);font-size:14px}.tool-directory strong span{color:var(--cyan)}
+@media(max-width:760px){.course-tabs{margin:0 -20px;padding:10px 20px}.course-tabs a{flex:1;padding:10px 8px;font-size:15px}.lesson-group{display:none}article{scroll-margin-top:80px}.journal-handoff{padding:15px}.tool-directory{grid-template-columns:1fr}.tool-directory a{padding:14px 16px}}
