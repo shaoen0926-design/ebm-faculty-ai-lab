@@ -25,9 +25,11 @@
 - 1 期刊文案萃取：1.1設計簡報大綱；1.2萃取文案與截取期刊圖。
 - 2 簡報美編：2.1 NotebookLM美編提示詞；2.2可編輯PPT；2.3繪圖簡報；2.4網頁簡報；2.5動畫HTML簡報。
 
-上課先完成1.1與1.2，再選一種美編路線；完成紀錄獨立保存，0工具不計入7題。
+上課先完成1.1與1.2，再選一種美編路線；完成紀錄獨立保存，0工具不計入8題。
 原圖保留出處與完整圖例，生成式圖片不取代原始研究圖表。工具不支援擷取或檔案生成時明確標示，避免虛構檔案。
 
 設計參考（2026-11-07查閱）：
 - NotebookLM簡報自訂與來源建議：https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/
 - CASP依研究類型提供評讀工具：https://casp-uk.net/casp-tools-checklists/
+
+- 3 功能頁面製作：3.1整合封面、大綱、章節與Take-home messages，輸入已完成的PPTX，交付完整PPTX。
