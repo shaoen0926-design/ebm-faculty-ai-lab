@@ -74,6 +74,30 @@ const COURSE=[
         "url": "https://drive.google.com/drive/folders/1gAzAiR_DxahcUHzqhnts3VV4nRzHL5-4?usp=sharing",
         "description": "Google Drive｜課程使用期刊"
       }
+    ],
+    "steps": [
+      "開啟素材資料夾，下載本次使用的期刊論文。",
+      "進入 1.1，將論文上傳至你選擇的 AI 工具。"
+    ]
+  },
+  {
+    "id": 11,
+    "code": "0.2",
+    "kind": "resources",
+    "group": "0｜準備",
+    "title": "課程講義",
+    "point": "開啟課程講義，搭配示範與實作閱讀。",
+    "time": 1,
+    "links": [
+      {
+        "name": "開啟課程講義",
+        "url": "https://drive.google.com/file/d/1Onj-PmsTFQp13VE0hqrwtyPveTEjxQ6N/view?usp=sharing",
+        "description": "Google Drive｜課程講義"
+      }
+    ],
+    "steps": [
+      "開啟課程講義，可在線上閱讀或下載保存。",
+      "上課時搭配講義與示範，依序完成練習。"
     ]
   },
   {

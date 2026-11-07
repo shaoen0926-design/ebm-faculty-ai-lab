@@ -39,7 +39,7 @@ function render(scroll=false){
  const actions=`<div class="actions"><button id="prev" ${index===0?'disabled':''}>上一題</button><button id="next" ${index===COURSE.length-1?'disabled':''}>${e.kind&&COURSE[index+1]?'前往 '+esc(codeFor(COURSE[index+1]))+' →':'下一題 →'}</button></div>`;
  const article=document.getElementById('lesson');
  if(e.kind==='resources'){
-  article.innerHTML=heading+`<div class="tool-directory">${e.links.map(t=>`<a href="${esc(t.url)}" target="_blank" rel="noopener noreferrer"><strong>${esc(t.name)} <span aria-hidden="true">↗</span></strong><span>${esc(t.description)}</span></a>`).join('')}</div><ol class="steps"><li>開啟素材資料夾，下載本次使用的期刊論文。</li><li>進入 1.1，將論文上傳至你選擇的 AI 工具。</li></ol><div class="lesson-bottom">${actions}</div>`;
+  article.innerHTML=heading+`<div class="tool-directory">${e.links.map(t=>`<a href="${esc(t.url)}" target="_blank" rel="noopener noreferrer"><strong>${esc(t.name)} <span aria-hidden="true">↗</span></strong><span>${esc(t.description)}</span></a>`).join('')}</div><ol class="steps">${e.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol><div class="lesson-bottom">${actions}</div>`;
  }else if(e.kind==='tools'){
   article.innerHTML=heading+`<div class="tool-directory">${e.links.map(t=>`<a href="${esc(t.url)}" target="_blank" rel="noopener noreferrer"><strong>${esc(t.name)} <span aria-hidden="true">↗</span></strong><span>${esc(t.description)}</span></a>`).join('')}</div><p class="tip">先選一個工具登入即可。PDF讀取、檔案輸出與生圖功能依工具及帳號而異。這裡提供入口與提示詞，論文請上傳到你選擇的AI工具。</p><div class="finish-target"><strong>帶著成果換工具</strong><p>保留論文PDF、1.2定稿文案、原圖檔與圖文對照清單。</p></div><div class="lesson-bottom">${actions}</div>`;
  }else{
