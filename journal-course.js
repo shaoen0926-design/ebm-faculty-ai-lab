@@ -8,7 +8,7 @@ const COURSE=[
     "id": 0,
     "code": "0",
     "kind": "tools",
-    "group": "準備",
+    "group": "0｜準備",
     "title": "使用工具",
     "point": "先登入工具，再用同一篇論文完成練習。",
     "time": 2,
@@ -57,6 +57,22 @@ const COURSE=[
         "name": "Google 簡報",
         "url": "https://slides.google.com/",
         "description": "組合原圖、修改文字與播放簡報"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "code": "0.1",
+    "kind": "resources",
+    "group": "0｜準備",
+    "title": "使用期刊",
+    "point": "開啟期刊素材，準備本次練習使用的論文。",
+    "time": 1,
+    "links": [
+      {
+        "name": "開啟期刊素材",
+        "url": "https://drive.google.com/drive/folders/1gAzAiR_DxahcUHzqhnts3VV4nRzHL5-4?usp=sharing",
+        "description": "Google Drive｜課程使用期刊"
       }
     ]
   },
