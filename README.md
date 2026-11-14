@@ -1,4 +1,4 @@
-# EBM x Ai 簡報實驗室｜實證師資班
+# Ai 簡報實驗室｜實證師資班
 
 以「研究設計」為共同主題，練習RCT、世代、病例對照與橫斷面研究的教學。11題，約49分鐘，不含生成等待與講解。
 
@@ -35,3 +35,14 @@
 - 3 功能頁面製作：3.1整合封面、大綱、章節與Take-home messages，輸入已完成的PPTX，交付完整PPTX；3.2 NBLM 功能頁，依來源製作封面、目錄、章節與結論頁。
 
 期刊簡報 QR code：`journal-qrcode.png`（圖片）、`journal-qrcode.svg`（向量），連至 https://shaoen0926-design.github.io/ebm-faculty-ai-lab/journal.html 。
+
+## 衛教簡報分頁
+
+入口：health.html。參考 https://shaoen0926-design.github.io/osteoporosis-ai-lab/ 的 11 題骨鬆衛教練習，沿用原提示詞與六頁課堂素材。
+
+- 01–03 破冰：衛教短文、水豚醫療人員、衛教重點卡。
+- 04–05 內容：衛教簡報大綱、逐頁內文。
+- 06–07 圖像：封面、結尾資訊圖。
+- 08–11 製作：可編輯 PPT、NotebookLM、圖片簡報、互動衛教網頁。
+
+每題提供提示詞複製與完成紀錄。NotebookLM 提供獨立的共用素材複製按鈕；下載來源為「骨鬆衛教六頁素材.txt」。本頁以繁體中文面向病人及家屬，完成進度與教學、期刊簡報分開保存。

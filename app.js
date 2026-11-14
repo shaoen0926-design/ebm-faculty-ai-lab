@@ -25,7 +25,7 @@ function toolLinks(e){
  if(e.tool==='nblm')return link('NotebookLM','https://notebooklm.google.com/');
  let html=link('Gemini','https://gemini.google.com/')+link('ChatGPT','https://chatgpt.com/');
  if(e.tool!=='image')html+=link('Claude','https://claude.ai/');
- if(!config.storageKey&&[1,10,11].includes(e.id))html+=link('NotebookLM','https://notebooklm.google.com/')+link('Grok','https://grok.com/')+link('Copilot','https://copilot.microsoft.com/');
+ if(e.extraTools||(!config.storageKey&&[1,10,11].includes(e.id)))html+=link('NotebookLM','https://notebooklm.google.com/')+link('Grok','https://grok.com/')+link('Copilot','https://copilot.microsoft.com/');
  return html;
 }
 function render(scroll=false){
@@ -43,7 +43,7 @@ function render(scroll=false){
  }else if(e.kind==='tools'){
   article.innerHTML=heading+`<div class="tool-directory">${e.links.map(t=>`<a href="${esc(t.url)}" target="_blank" rel="noopener noreferrer"><strong>${esc(t.name)} <span aria-hidden="true">↗</span></strong><span>${esc(t.description)}</span></a>`).join('')}</div><p class="tip">先選一個工具登入即可。PDF讀取、檔案輸出與生圖功能依工具及帳號而異。這裡提供入口與提示詞，論文請上傳到你選擇的AI工具。</p><div class="finish-target"><strong>帶著成果換工具</strong><p>保留論文PDF、1.2定稿文案、原圖檔與圖文對照清單。</p></div><div class="lesson-bottom">${actions}</div>`;
  }else{
-  const showSource=!config.storageKey&&e.id===7;
+  const showSource=e.copySource||(!config.storageKey&&e.id===7);
   article.innerHTML=heading+`<div class="launch-links">${toolLinks(e)}</div><ol class="steps">${e.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol>${showSource?'<div class="source-action"><button id="copySource">複製共用素材</button><span>先加入來源，再貼下方簡報指令。</span></div>':''}<div class="prompt"><div class="prompt-head"><label for="promptText">本題提示詞<small>${e.prompt.includes('【共用六頁素材】')?'下方完整顯示提示詞與六頁素材，複製內容與此相同。':'複製內容與下方文字相同。'}</small></label><button id="copyPrompt">複製第 ${esc(code)} 題提示詞</button></div><textarea id="promptText" rows="10" readonly aria-label="本題提示詞">${esc(e.prompt)}</textarea></div><div class="finish-target"><strong>完成到這裡</strong><p>${esc(e.done)}</p></div>${e.tip?`<p class="tip">${esc(e.tip)}</p>`:''}${!config.storageKey&&e.id===8?'<p class="tip">圖片簡報的文字已成為圖片，後續較難編輯；先確認內容與中文字，再組合成簡報。</p>':''}<div class="lesson-bottom"><label class="finish"><input id="done" type="checkbox" ${saved[e.id]?'checked':''}>我已完成</label>${actions}</div>`;
   document.getElementById('copyPrompt').onclick=ev=>copy(document.getElementById('promptText').value,'第 '+code+' 題提示詞',ev.currentTarget);
   const source=document.getElementById('copySource');if(source)source.onclick=()=>copy(MATERIAL);
